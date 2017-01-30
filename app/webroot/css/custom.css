@@ -1,3 +1,25 @@
-.jumbotron {
-    padding: 1em;
+.navbar {
+    margin-bottom: 20px;
+}
+
+.card-news {
+    border: none;
+    border-radius: 0;
+}
+
+.card-block-news-comments {
+    margin-top: 0;
+    background-color: #efefef;
+    margin-bottom: 5px;
+}
+
+.card-news-comments {
+    padding-top: 5px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-header {
+    background-color: black;
+    color: white;
 }

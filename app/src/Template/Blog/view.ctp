@@ -1,42 +1,46 @@
-<?php
-$datetime = explode(',', $post->created);
-$date = $datetime[0];
-$time = $datetime[1];
-?>
 <div class="row">
     <div class="col-md-12">
-        <div class="card">
-            <div class="card-block">
-                <h3 class="card-title"><?= $post->title ?></h3>
-                <p><?= $post->content ?></p>
-                <p class="small">
-                    <strong><?= $post->author ?></strong> | <?= $date ?> | <?= $time ?>
-                </p>
-            </div>
-        </div>
+        <h3 class="card-title"><?= $post->title ?></h3>
+        <p><?= $post->content ?></p>
+        <p class="small">
+            <?php
+                $datetime = explode(',', $post->created);
+                $date = $datetime[0];
+                $time = $datetime[1];
+            ?>
+            <strong><?= $post->author ?></strong> | <?= $date ?> | <?= $time ?>
+        </p>
         <br>
-        <div class="card">
-            <div class="card-block">
-                <h4 class="comments-heading">Comments</h4> <br>
+        <div class="card card-news">
+            <div class="card-header">
+                Reacties
+            </div>
+            <div class="card-block card-news-comments">
                 <?php foreach($post->blog_posts_comments as $comment) : ?>
-                    <div class="card">
-                        <div class="card-block">
-                            <p class="card-text">
-                                <?= $comment->content ?>
-                            </p>
+                    <?php
+                        $datetime = explode(',', $comment->created);
+                        $date = $datetime[0];
+                        $time = $datetime[1];
+                    ?>
+                    <div class="card card-news">
+                        <div class="card-block card-block-news-comments">
                             <p class="small">
                                 <strong><?= $comment->author ?></strong> | <?= $date ?> | <?= $time ?>
                             </p>
+                            <p class="card-text">
+                                <?= $comment->content ?>
+                            </p>
                         </div>
                     </div>
-                    <br>
                 <?php endforeach ?>
             </div>
         </div>
         <br>
-        <div class="card">
+        <div class="card card-news">
+            <div class="card-header">
+                Reageer
+            </div>
             <div class="card-block">
-                <h4>Comment toevoegen</h4>
                 <?= $this->Form->create('', ['class' => 'form-horizontal', 'url' => '/blog/createComment/'.$post->id]); ?>
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="title">Title</label>

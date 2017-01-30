@@ -26,7 +26,7 @@ class BlogController extends Controller
 
     public function view($id)
     {
-        $post = $this->loadModel('BlogPosts')->get($id, ['contain' => ['BlogPostsComments'], ['order' => ['BlogPostsComments.created' => 'DESC']]]);
+        $post = $this->loadModel('BlogPosts')->get($id, ['contain' => ['BlogPostsComments' => ['sort' => ['BlogPostsComments.created' => 'DESC']]]]);
         $this->set(compact('post'));
     }
 
