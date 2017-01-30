@@ -2,3 +2,48 @@
 /config/app.php
 /tmp/*
 /logs/*
+bower bower_components#*    not-cached git://github.com//bower_components.git#*
+bower bower_components#*       resolve git://github.com//bower_components.git#*
+bower webroot/js/jquery#*   not-cached https://github.com/jquery/jquery-dist.git#*
+bower webroot/js/jquery#*      resolve https://github.com/jquery/jquery-dist.git#*
+bower add#*                 not-cached https://github.com/mvaldetaro/twbs-buttons.git#*
+bower add#*                    resolve https://github.com/mvaldetaro/twbs-buttons.git#*
+bower bootstrap#*           not-cached https://github.com/twbs/bootstrap.git#*
+bower bootstrap#*              resolve https://github.com/twbs/bootstrap.git#*
+bower webroot/css/bootstrap#*       not-cached https://github.com/twbs/bootstrap.git#*
+bower webroot/css/bootstrap#*          resolve https://github.com/twbs/bootstrap.git#*
+bower webroot/js/bootstrap#*        not-cached https://github.com/twbs/bootstrap.git#*
+bower webroot/js/bootstrap#*           resolve https://github.com/twbs/bootstrap.git#*
+bower echo#*                        not-cached https://github.com/gvn/echo.git#*
+bower echo#*                           resolve https://github.com/gvn/echo.git#*
+bower bower.json#*                  not-cached https://github.com/Kalitte/app-states.git#*
+bower bower.json#*                     resolve https://github.com/Kalitte/app-states.git#*
+bower add#*                           checkout master
+bower bower.json#*                    checkout v0.6.9
+bower echo#*                          checkout v0.0.1
+bower webroot/js/jquery#*             checkout 3.1.1
+bower webroot/css/bootstrap#*         checkout v3.3.7
+bower webroot/js/bootstrap#*          checkout v3.3.7
+bower bootstrap#*                     checkout v3.3.7
+bower echo#*                          resolved https://github.com/gvn/echo.git#0.0.1
+bower add#*                           resolved https://github.com/mvaldetaro/twbs-buttons.git#30d30e929f
+bower bower.json#*                    resolved https://github.com/Kalitte/app-states.git#0.6.9
+bower webroot/js/jquery#*             resolved https://github.com/jquery/jquery-dist.git#3.1.1
+bower webroot/js/bootstrap#*          progress Receiving objects:  62% (254/409), 2.89 MiB | 1.91 MiB/s
+bower bootstrap#*                     progress Receiving objects:  51% (209/409), 2.02 MiB | 1.29 MiB/s
+bower webroot/css/bootstrap#*         progress Receiving objects:  61% (253/409), 2.59 MiB | 967.00 KiB/s
+bower bootstrap#*                     progress Receiving objects:  62% (254/409), 2.96 MiB | 1.13 MiB/s
+bower webroot/js/bootstrap#*          progress Checking out files:  36% (135/375)
+bower webroot/css/bootstrap#*         progress Checking out files:  36% (138/375)
+bower bootstrap#*                     progress Checking out files:  36% (138/375)
+bower webroot/js/bootstrap#*          progress Checking out files:  42% (158/375)
+bower webroot/css/bootstrap#*         progress Checking out files:  46% (173/375)
+bower bootstrap#*                     progress Checking out files:  47% (177/375)
+bower webroot/js/bootstrap#*          progress Checking out files:  61% (229/375)
+bower webroot/css/bootstrap#*         progress Checking out files:  67% (252/375)
+bower bootstrap#*                     progress Checking out files:  77% (289/375)
+bower webroot/js/bootstrap#*          progress Checking out files:  77% (289/375)
+bower webroot/css/bootstrap#*         progress Checking out files:  82% (308/375)
+bower webroot/js/bootstrap#*          resolved https://github.com/twbs/bootstrap.git#3.3.7
+bower webroot/css/bootstrap#*         resolved https://github.com/twbs/bootstrap.git#3.3.7
+bower bootstrap#*                     resolved https://github.com/twbs/bootstrap.git#3.3.7
