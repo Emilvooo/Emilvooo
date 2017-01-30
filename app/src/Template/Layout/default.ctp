@@ -25,13 +25,9 @@
 
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('custom.css') ?>
-
-    <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -39,8 +35,8 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="#">EMILVOOO</a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/app/">Home <span class="sr-only">(current)</span></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $this->Url->build(["controller" => "Home", "action" => "Index"]);?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?php echo $this->Url->build(["controller" => "Blog", "action" => "Index"]);?>">Blog</a>
@@ -55,5 +51,8 @@
     </div>
     <footer>
     </footer>
+    <?= $this->Html->script('jquery-3.1.1.min.js') ?>
+    <?= $this->Html->script('bootstrap.js') ?>
+    <?= $this->Html->script('custom.js') ?>
 </body>
 </html>

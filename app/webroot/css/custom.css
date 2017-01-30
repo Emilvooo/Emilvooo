@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400');
+
+body {
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+}
+
 .navbar {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.navbar-inverse {
+    background-color: black !important;
 }
 
 .card-news {
@@ -22,4 +33,9 @@
 .card-header {
     background-color: black;
     color: white;
+}
+
+.article-blog:nth-child(n+2) {
+    padding-top: 30px;
+    border-top: 1px solid #909090;
 }

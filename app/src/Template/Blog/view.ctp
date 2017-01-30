@@ -4,9 +4,9 @@
         <p><?= $post->content ?></p>
         <p class="small">
             <?php
-                $datetime = explode(',', $post->created);
-                $date = $datetime[0];
-                $time = $datetime[1];
+            $datetime = explode(',', $post->created);
+            $date = $datetime[0];
+            $time = $datetime[1];
             ?>
             <strong><?= $post->author ?></strong> | <?= $date ?> | <?= $time ?>
         </p>
@@ -18,9 +18,9 @@
             <div class="card-block card-news-comments">
                 <?php foreach($post->blog_posts_comments as $comment) : ?>
                     <?php
-                        $datetime = explode(',', $comment->created);
-                        $date = $datetime[0];
-                        $time = $datetime[1];
+                    $datetime = explode(',', $comment->created);
+                    $date = $datetime[0];
+                    $time = $datetime[1];
                     ?>
                     <div class="card card-news">
                         <div class="card-block card-block-news-comments">
@@ -37,7 +37,7 @@
         </div>
         <br>
         <div class="card card-news">
-            <div class="card-header">
+            <div class="card-header" id="comments">
                 Reageer
             </div>
             <div class="card-block">
