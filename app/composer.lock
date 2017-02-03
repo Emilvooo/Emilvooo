@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2b7f59dfa1b312f673c8eb2f49aa77bf",
-    "content-hash": "ea3c478c2ccdb8d48fac10fdee52b565",
+    "hash": "2a7a63058f6ca7223ebab5871a2637b2",
+    "content-hash": "4dcf10a451274adb6e310a5cde16b297",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -128,16 +128,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "3.3.12",
+            "version": "3.3.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "9e41f111f68ef646bcf8b03b9b4885598e4d9de3"
+                "reference": "17e96e1669018668d97e67d36be938f445b5ec55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/9e41f111f68ef646bcf8b03b9b4885598e4d9de3",
-                "reference": "9e41f111f68ef646bcf8b03b9b4885598e4d9de3",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/17e96e1669018668d97e67d36be938f445b5ec55",
+                "reference": "17e96e1669018668d97e67d36be938f445b5ec55",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-01-14 02:44:01"
+            "time": "2017-01-29 03:15:39"
         },
         {
             "name": "cakephp/chronos",
@@ -344,6 +344,47 @@
             ],
             "description": "A composer installer for CakePHP 3.0+ plugins.",
             "time": "2016-04-28 03:01:34"
+        },
+        {
+            "name": "holt59/cakephp3-bootstrap-helpers",
+            "version": "dev-v4.0.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Holt59/cakephp3-bootstrap-helpers.git",
+                "reference": "0016847021df345ad7066fd6d8553cf25c958456"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Holt59/cakephp3-bootstrap-helpers/zipball/0016847021df345ad7066fd6d8553cf25c958456",
+                "reference": "0016847021df345ad7066fd6d8553cf25c958456",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/cakephp": "~3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "cakephp-plugin",
+            "extra": {
+                "installer-name": "Bootstrap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bootstrap\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "description": "Bootstrap Helpers for CakePHP 3.0",
+            "homepage": "https://holt59.github.io/cakephp3-bootstrap-helpers/",
+            "keywords": [
+                "bootstrap",
+                "cakephp"
+            ],
+            "time": "2015-09-15 13:35:47"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -955,16 +996,16 @@
     "packages-dev": [
         {
             "name": "cakephp/bake",
-            "version": "1.2.13",
+            "version": "1.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "28d9a67d41fec773dc618d0b639c3b3d74b17eaf"
+                "reference": "24ef0cc781b529a8566cce4ecaf3aeaa1f08efd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/28d9a67d41fec773dc618d0b639c3b3d74b17eaf",
-                "reference": "28d9a67d41fec773dc618d0b639c3b3d74b17eaf",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/24ef0cc781b529a8566cce4ecaf3aeaa1f08efd4",
+                "reference": "24ef0cc781b529a8566cce4ecaf3aeaa1f08efd4",
                 "shasum": ""
             },
             "require": {
@@ -998,20 +1039,20 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2017-01-26 02:57:18"
+            "time": "2017-01-31 00:59:03"
         },
         {
             "name": "cakephp/debug_kit",
-            "version": "3.6.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "f064138375048a3a9ddfa51fef403704ad186c3f"
+                "reference": "4a2051878107c8c4110b0b7e7d9adc317f07f73e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/f064138375048a3a9ddfa51fef403704ad186c3f",
-                "reference": "f064138375048a3a9ddfa51fef403704ad186c3f",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/4a2051878107c8c4110b0b7e7d9adc317f07f73e",
+                "reference": "4a2051878107c8c4110b0b7e7d9adc317f07f73e",
                 "shasum": ""
             },
             "require": {
@@ -1056,7 +1097,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2017-01-19 03:11:00"
+            "time": "2017-01-31 02:52:30"
         },
         {
             "name": "composer/ca-bundle",
@@ -1979,6 +2020,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "holt59/cakephp3-bootstrap-helpers": 20,
         "psy/psysh": 0
     },
     "prefer-stable": false,

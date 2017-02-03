@@ -1,3 +1,10 @@
+<?php
+$this->Breadcrumbs->add([
+    ['title' => 'Home', 'url' => ['controller' => 'home', 'action' => 'index']],
+    ['title' => 'Blog', 'url' => ['controller' => 'blog', 'action' => 'index']],
+    ['title' => $post->title]
+]);
+?>
 <div class="row">
     <div class="col-md-12">
         <h3 class="card-title"><?= $post->title ?></h3>
@@ -41,26 +48,13 @@
                 Reageer
             </div>
             <div class="card-block">
-                <?= $this->Form->create('', ['class' => 'form-horizontal', 'url' => '/blog/createComment/'.$post->id]); ?>
-                <div class="form-group">
-                    <label class="col-md-3 control-label" for="title">Title</label>
-                    <div class="col-md-6">
-                        <?php echo $this->Form->input('title', ['type' => 'text', 'id' => 'title', 'placeholder' => '', 'class' => 'form-control ', 'div' => false, 'label' => false, 'required']); ?>
-                        <div class="help-block with-errors"></div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-3 control-label" for="text">Content</label>
-                    <div class="col-md-6">
-                        <?php echo $this->Form->input('content', ['type' => 'textarea', 'id' => 'text', 'placeholder' => '', 'class' => 'form-control ', 'div' => false, 'label' => false, 'required']); ?>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-lg-12">
-                        <?= $this->Form->button('Opslaan', ['class' => 'btn btn-primary']); ?>
-                    </div>
-                </div>
-                <?= $this->Form->end(); ?>
+                <?php
+                echo $this->Form->create(null, ['url' => '/blog/createComment/'.$post->id]);
+                echo $this->Form->input('title');
+                echo $this->Form->input('content', ['type' => 'textarea']);
+                echo $this->Form->button('Opslaan');
+                echo $this->Form->end();
+                ?>
             </div>
         </div>
     </div>

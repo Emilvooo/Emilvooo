@@ -38,7 +38,7 @@ class BlogController extends Controller
             $comment->author = 'Emilvooo';
             $comment->blog_post_id = $id;
             if ($this->loadModel('BlogPostsComments')->save($comment)) {
-                return $this->redirect(['action' => 'view/'.$id.'']);
+                return $this->redirect(['action' => $id]);
             }
             else {
                 $this->Flash->set('Er ging iets mis! Controleer of alle velden correct ingevuld zijn.', ['class' => 'alert alert-danger']);

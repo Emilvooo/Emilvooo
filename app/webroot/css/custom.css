@@ -1,16 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
 body {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
 
-.navbar {
-    margin-bottom: 30px;
-}
-
-.navbar-inverse {
-    background-color: black !important;
+.jumbotron {
+    padding: 20px 0 10px 0;
 }
 
 .card-news {
@@ -21,17 +17,17 @@ body {
 .card-block-news-comments {
     margin-top: 0;
     background-color: #efefef;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .card-news-comments {
-    padding-top: 5px;
+    padding-top: 0;
     padding-left: 0;
     padding-right: 0;
 }
 
 .card-header {
-    background-color: black;
+    background-color: #374046;
     color: white;
 }
 

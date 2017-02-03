@@ -24,7 +24,6 @@ use Cake\View\View;
  */
 class AppView extends View
 {
-
     /**
      * Initialization hook method.
      *
@@ -36,5 +35,16 @@ class AppView extends View
      */
     public function initialize()
     {
+        $this->loadHelper('Html', ['className' => 'Bootstrap.BootstrapHtml', 'useFontAwesome' => true]);
+        $this->loadHelper('Form', ['className' => 'Bootstrap.BootstrapForm']);
+        $this->loadHelper('Flash', ['className' => 'Bootstrap.BootstrapFlash']);
+        $this->loadHelper('Paginator', ['className' => 'Bootstrap.BootstrapPaginator']);
+
+        // Breadcrumb
+        $this->Breadcrumbs->templates([
+            'wrapper' => '<ol class="breadcrumb"><div class="container">{{content}}</div></ol>',
+            'item' => '<li class="breadcrumb-item">{{icon}}<a href="{{url}}"{{innerAttrs}}>{{title}}</a></li>{{separator}}',
+            'itemWithoutLink' => '<li class="breadcrumb-item"><span{{innerAttrs}}>{{title}}</span></li>{{separator}}',
+        ]);
     }
 }
