@@ -13,9 +13,10 @@ $this->Breadcrumbs->add([
             </div>
             <div class="card-block">
                 <?php
-                echo $this->Form->create(null);
+                echo $this->Form->create(null, ['url' => '/contact/sendEmail']);
                 echo $this->Form->input('name');
                 echo $this->Form->input('email');
+                echo $this->Form->input('title');
                 echo $this->Form->input('message', ['type' => 'textarea']);
                 echo $this->Form->button('Verstuur');
                 echo $this->Form->end();
