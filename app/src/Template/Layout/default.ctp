@@ -36,10 +36,13 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $this->Url->build(["controller" => "Home", "action" => "Index"]);?>">Home</a>
+                        <a class="nav-link <?php echo ($this->fetch('title') == 'Home') ? 'active' : ''; ?>" href="<?php echo $this->Url->build(["controller" => "Home", "action" => "Index"]);?>">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo $this->Url->build(["controller" => "Blog", "action" => "Index"]);?>">Blog</a>
+                        <a class="nav-link <?php echo ($this->fetch('title') == 'Blog') ? 'active' : ''; ?>" href="<?php echo $this->Url->build(["controller" => "Blog", "action" => "Index"]);?>">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link <?php echo ($this->fetch('title') == 'Contact') ? 'active' : ''; ?>" href="<?php echo $this->Url->build(["controller" => "Contact", "action" => "Index"]);?>">Contact</a>
                     </li>
                 </ul>
             </div>
