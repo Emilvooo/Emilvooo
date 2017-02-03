@@ -20,7 +20,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $content = 'Contact?! Okey cool..';
+        $content = 'Vul het onderstaande contact formulier in om contact met ons op te nemen. We zullen dan indien nodig spoedig contact met u opnemen.';
         $this->set(compact('content'));
     }
 }
