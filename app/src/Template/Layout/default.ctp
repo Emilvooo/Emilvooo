@@ -48,10 +48,9 @@
             </div>
         </div>
     </nav>
-    <?php
-    echo $this->Breadcrumbs->render();
-    ?>
+    <?= $this->Breadcrumbs->render(); ?>
     <div class="container">
+        <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
     </div>
     <footer>

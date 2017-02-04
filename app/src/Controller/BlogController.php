@@ -14,9 +14,7 @@
  */
 namespace App\Controller;
 
-use Cake\Controller\Controller;
-
-class BlogController extends Controller
+class BlogController extends AppController
 {
     public function index()
     {
@@ -38,10 +36,15 @@ class BlogController extends Controller
             $comment->author = 'Emilvooo';
             $comment->blog_post_id = $id;
             if ($this->loadModel('BlogPostsComments')->save($comment)) {
+                $this->Flash->set('Je reactie is succesvol geplaatst!', [
+                    'element' => 'success'
+                ]);
                 return $this->redirect(['action' => $id]);
             }
             else {
-                $this->Flash->set('Er ging iets mis! Controleer of alle velden correct ingevuld zijn.', ['class' => 'alert alert-danger']);
+                $this->Flash->set('Er ging iets mis! Controleer of alle velden correct ingevuld zijn.', [
+                    'element' => 'error'
+                ]);
             }
         }
     }

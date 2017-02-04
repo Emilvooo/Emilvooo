@@ -17,7 +17,8 @@ body {
 .card-block-news-comments {
     margin-top: 0;
     background-color: #efefef;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    border-top: 1px solid #909090;
 }
 
 .card-news-comments {

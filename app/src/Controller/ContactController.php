@@ -14,10 +14,9 @@
  */
 namespace App\Controller;
 
-use Cake\Controller\Controller;
 use Cake\Network\Email\Email;
 
-class ContactController extends Controller
+class ContactController extends AppController
 {
     public function index()
     {
@@ -29,12 +28,15 @@ class ContactController extends Controller
     {
         if ($this->request->is('post')) {
             $emailContent = $this->request->data;
-            $email = new Email();
+            $email = new Email('default');
             $email->transport('mailjet');
             $email->from([$emailContent['email'] => 'Emilvooo.nl'])
                 ->to('emilveldhuizen@gmail.com')
                 ->subject($emailContent['title']);
             if ($email->send($emailContent['message'])) {
+                $this->Flash->set('Je email is succesvol verstuurd!', [
+                    'element' => 'success'
+                ]);
                 return $this->redirect(['action' => 'index']);
             }
         }

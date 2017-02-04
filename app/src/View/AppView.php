@@ -37,8 +37,6 @@ class AppView extends View
     {
         $this->loadHelper('Html', ['className' => 'Bootstrap.BootstrapHtml', 'useFontAwesome' => true]);
         $this->loadHelper('Form', ['className' => 'Bootstrap.BootstrapForm']);
-        $this->loadHelper('Flash', ['className' => 'Bootstrap.BootstrapFlash']);
-        $this->loadHelper('Paginator', ['className' => 'Bootstrap.BootstrapPaginator']);
 
         // Breadcrumb
         $this->Breadcrumbs->templates([
