@@ -5,7 +5,10 @@ $this->Breadcrumbs->add([
 ])
 ;?>
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-4">
+        <p>:)</p>
+    </div>
+    <div class="col-md-6 offset-md-2">
         <?php foreach($posts as $post) : ?>
         <?php
         $countComments = sizeof($post->blog_posts_comments);

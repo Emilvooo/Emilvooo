@@ -18,6 +18,8 @@ $this->Breadcrumbs->add([
             <strong><?= $post->author ?></strong> | <?= $date ?> | <?= $time ?>
         </p>
         <br>
+    </div>
+    <div class="col-md-12">
         <div class="card card-news">
             <div class="card-header">
                 Reacties
@@ -43,19 +45,23 @@ $this->Breadcrumbs->add([
             </div>
         </div>
         <br>
-        <div class="card card-news">
+    </div>
+    <div class="col-md-12">
+        <div class="card card-news-react">
             <div class="card-header" id="comments">
                 Reageer
             </div>
             <div class="card-block">
                 <?php
                 echo $this->Form->create(null, ['url' => '/blog/createComment/'.$post->id]);
-                echo $this->Form->input('title');
-                echo $this->Form->input('content', ['type' => 'textarea']);
-                echo $this->Form->button('Opslaan');
+                echo $this->Form->input('author', ['label' => 'Naam']);
+                echo $this->Form->input('title', ['label' => 'Titel']);
+                echo $this->Form->input('content', ['type' => 'textarea', 'label' => 'Bericht']);
+                echo $this->Form->button('Verstuur');
                 echo $this->Form->end();
                 ?>
             </div>
         </div>
+        <br>
     </div>
 </div>

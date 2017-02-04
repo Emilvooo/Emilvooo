@@ -7,7 +7,9 @@ $this->Breadcrumbs->add([
 <div class="row">
     <div class="col-md-12">
         <p><?= $content ?></p>
-        <div class="card card-news">
+    </div>
+    <div class="col-md-4">
+        <div class="card card-contact">
             <div class="card-header" id="comments">
                 Conctact formulier
             </div>

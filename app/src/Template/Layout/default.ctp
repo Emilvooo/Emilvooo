@@ -53,7 +53,11 @@
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
+    <footer class="footer">
+        <div class="container">
+            <hr>
+            <p>&copy; Emilvooo <?= date('Y'); ?></p>
+        </div>
     </footer>
     <?= $this->Html->script('jquery-3.1.1.min.js') ?>
     <?= $this->Html->script('bootstrap.js') ?>

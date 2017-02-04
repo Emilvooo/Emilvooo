@@ -33,7 +33,6 @@ class BlogController extends AppController
         $comment = $this->loadModel('BlogPostsComments')->newEntity();
         if ($this->request->is('post')) {
             $comment = $this->loadModel('BlogPostsComments')->patchEntity($comment, $this->request->data);
-            $comment->author = 'Emilvooo';
             $comment->blog_post_id = $id;
             if ($this->loadModel('BlogPostsComments')->save($comment)) {
                 $this->Flash->set('Je reactie is succesvol geplaatst!', [
