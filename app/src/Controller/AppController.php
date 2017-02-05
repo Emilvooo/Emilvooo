@@ -42,6 +42,16 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'loginRedirect' => [
+                'controller' => 'Blog',
+                'action' => 'index'
+            ],
+            'logoutRedirect' => [
+                'controller' => 'Home',
+                'action' => 'index'
+            ]
+        ]);
 
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -51,18 +61,8 @@ class AppController extends Controller
         //$this->loadComponent('Csrf');
     }
 
-    /**
-     * Before render callback.
-     *
-     * @param \Cake\Event\Event $event The beforeRender event.
-     * @return \Cake\Network\Response|null|void
-     */
-    public function beforeRender(Event $event)
+    public function beforeFilter(Event $event)
     {
-        if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
-        ) {
-            $this->set('_serialize', true);
-        }
+        $this->Auth->allow(['index', 'view']);
     }
 }
