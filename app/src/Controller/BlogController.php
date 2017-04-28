@@ -16,28 +16,17 @@ namespace App\Controller;
 
 class BlogController extends AppController
 {
-    public function isAuthorized($user)
-    {
-        // Admin can access every action
-        if (isset($user['role']) && $user['role'] === 'admin') {
-            return true;
-        }
-
-        // Default deny
-        return false;
-    }
-
     public function index()
     {
-        $content = 'Blijkbaar is dit een blog pagina.. Oh.';
         $posts = $this->loadModel('BlogPosts')->find()->contain(['BlogPostsComments'])->order(['BlogPosts.created' => 'DESC']);
-        $this->set(compact('content', 'posts', 'countComments'));
+        $this->set(compact('posts', 'countComments'));
     }
 
     public function view($id)
     {
         $post = $this->loadModel('BlogPosts')->get($id, ['contain' => ['BlogPostsComments' => ['sort' => ['BlogPostsComments.created' => 'DESC']]]]);
         $this->set(compact('post'));
+        return $this->redirect(['controller' => 'blog', 'action' => 'index']);
     }
 
     public function createPost()

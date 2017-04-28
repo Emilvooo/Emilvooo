@@ -18,7 +18,9 @@ class HomeController extends AppController
 {
     public function index()
     {
-        $content = 'Hi! Welkom op Emilvoo.nl!';
-        $this->set(compact('content'));
+        $title = 'Welkom!';
+        $content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum, turpis et vehicula rutrum, risus metus bibendum urna, id efficitur est dolor et purus. Nullam venenatis ligula vitae risus convallis fringilla. Phasellus sit amet vehicula sem, ac scelerisque risus. Quisque et mi vel arcu pulvinar ornare et sed ante. Nullam porta dui ante, fermentum malesuada nisl laoreet sed. Suspendisse sed justo ligula. In sed congue sapien. Morbi molestie lacus quis turpis maximus, id lacinia risus ornare. Phasellus eu urna tempor nisl facilisis malesuada. Integer non mattis ex. Aliquam dapibus sodales orci, vel rhoncus arcu venenatis quis.';
+        $posts = $this->loadModel('BlogPosts')->find()->contain(['BlogPostsComments'])->order(['BlogPosts.created' => 'DESC'])->limit(6);
+        $this->set(compact('title', 'content', 'posts'));
     }
 }

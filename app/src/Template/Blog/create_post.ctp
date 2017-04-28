@@ -2,14 +2,14 @@
 $this->Breadcrumbs->add([
     ['title' => 'Home', 'url' => ['controller' => 'home', 'action' => 'index']],
     ['title' => 'Blog', 'url' => ['controller' => 'blog', 'action' => 'index']],
-    ['title' => 'Toevoegen']
+    ['title' => 'Post toevoegen']
 ]);
 ?>
 <div class="row">
     <div class="col-md-12">
-        <div class="card card-news-react">
+        <div class="card card-news-react card-shadow">
             <div class="card-header">
-                Toevoegen
+                Post toevoegen
             </div>
             <div class="card-block">
                 <?php

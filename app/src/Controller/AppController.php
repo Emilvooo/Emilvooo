@@ -44,7 +44,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
             'loginRedirect' => [
-                'controller' => 'Blog',
+                'controller' => 'Profile',
                 'action' => 'index'
             ],
             'logoutRedirect' => [
@@ -52,17 +52,29 @@ class AppController extends Controller
                 'action' => 'index'
             ]
         ]);
-
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see http://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+    	$this->loadComponent('Security', ['blackHoleCallback' => 'forceSSL']);
     }
 
     public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['index', 'view']);
+        parent::beforeFilter($event);
+        if ($this->request->clientIp() !== '127.0.0.1') {
+            $this->Security->requireSecure();
+        }
+        $this->Auth->allow(['index', 'view', 'sendEmail']);
+    }
+
+    public function isAuthorized($user)
+    {
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        return false;
+    }
+
+    public function forceSSL()
+    {
+        return $this->redirect('https://' . env('SERVER_NAME') . $this->request->here);
     }
 }

@@ -7,5 +7,5 @@ if (!isset($params['escape']) || $params['escape'] !== false) {
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <strong>Hoppakee!</strong> <?= $message ?>
+    <strong>Yes!</strong> <?= $message ?>
 </div>
